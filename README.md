@@ -20,6 +20,9 @@ When there are even numbers in both heaps we will use min heap and max heap's av
 
 This program fetches current median in `O(1)` and adds new elments in `O(log(n))` time.
 
+However, there can be drawback with this method, becuase hepas are stored in memory and when the data exceeds the memory then we may have to use alternative solution that can be to use distributed machines etc.
+
+However, here assumption is made that data will not exceed the processor RAM.
 You can simply run the program by just `sh run.sh` command and you can see the output in wc_ouput direcotry.
 
-If you have any questions please contact me daniharsh28@asu.edu
+If you have any questions please contact me on daniharsh28@asu.edu
