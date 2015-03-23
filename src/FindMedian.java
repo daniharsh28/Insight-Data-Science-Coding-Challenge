@@ -18,13 +18,9 @@ public class FindMedian {
 		File inFile = new File(inputFile);
 		//To keep the fileNames Sorted I use TreeSet!
 		TreeSet<String> fileNames = new TreeSet<String>(); 
-		if (inFile.isDirectory()) { //check whether file is directory
-			File[] listOfFiles = inFile.listFiles();
-			for (File f : listOfFiles)  
-				fileNames.add(f.getAbsolutePath());
-		} else {
-			fileNames.add(inFile.getName());
-		}
+		File[] listOfFiles = inFile.listFiles();
+		for (File f : listOfFiles)
+			fileNames.add(f.getAbsolutePath());
 		//declare all readers and writers used for reading and writing
 		BufferedReader br = null;
 		String line = null;

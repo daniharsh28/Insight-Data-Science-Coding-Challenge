@@ -19,13 +19,9 @@ public class WordCount {
 		File inFile = new File(inputFile);
 		//To make sure that all files are sorted
 		TreeSet<String> fileNames = new TreeSet<String>();
-		if (inFile.isDirectory()) { //Check if file is directory
-			File[] listOfFiles = inFile.listFiles();
-			for (File f : listOfFiles)
-				fileNames.add(f.getAbsolutePath());
-		} else {
-			fileNames.add(inFile.getName());
-		}
+		File[] listOfFiles = inFile.listFiles();
+		for (File f : listOfFiles)
+			fileNames.add(f.getAbsolutePath());
 		//Intialize readers and writers
 		BufferedReader br = null;
 		BufferedWriter bw = null;
